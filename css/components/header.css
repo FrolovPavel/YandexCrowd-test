@@ -1,0 +1,19 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    display: flex;
+    gap: clamp(0.313rem, 0.289rem + 0.1vw, 0.375rem);
+    font-size: clamp(0.901rem, 0.849rem + 0.23vw, 1.041rem);
+    line-height: 1.08;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-top: clamp(1.125rem, 0.936rem + 0.81vw, 1.625rem);
+    color: var(--color-logo);
+}
+
+.header img {
+    width: clamp(4.969rem, 4.677rem + 1.24vw, 5.739rem);
+}

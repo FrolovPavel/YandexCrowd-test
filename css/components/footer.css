@@ -1,0 +1,15 @@
+.footer {
+    background-color: var(--color-pearl);
+}
+
+.footer__text {
+    color: var(--color-black-60);
+    line-height: 1.2;
+    padding-block: 40px 60px;
+}
+
+@media (min-width: 768px) {
+    .footer__text {
+       padding-block-end: 72px;
+    }
+}

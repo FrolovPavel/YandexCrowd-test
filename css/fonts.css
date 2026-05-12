@@ -1,0 +1,50 @@
+/*Golos Text*/
+
+@font-face {
+    font-family: "Golos Text";
+    src: url("../assets/fonts/golos-text/GolosText-Regular.woff2")
+        format("woff2");
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Golos Text";
+    src: url("../assets/fonts/golos-text/GolosText-Medium.woff2")
+        format("woff2");
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Golos Text";
+    src: url("../assets/fonts/golos-text/GolosText-SemiBold.woff2")
+        format("woff2");
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Golos Text";
+    src: url("../assets/fonts/golos-text/GolosText-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-display: swap;
+}
+
+/*Merriweather*/
+
+@font-face {
+    font-family: "Merriweather";
+    src: url("../assets/fonts/merriweather/Merriweather-Regular.woff2")
+        format("woff2");
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Merriweather";
+    src: url("../assets/fonts/merriweather/Merriweather-Bold.woff2")
+        format("woff2");
+    font-weight: 700;
+    font-display: swap;
+}

@@ -1,0 +1,161 @@
+.hero {
+    position: relative;
+    background-color: var(--color-pearl);
+    height: 774px;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('../../assets/image/texture.png');
+    background-size: cover;
+    mix-blend-mode: color-burn;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.hero__container {
+    position: relative;
+    height: 100%;
+}
+
+.hero__king {
+    z-index: 1;
+    position: absolute;
+    bottom: clamp(6.875rem, 5.598rem + 5.45vw, 10.25rem);
+    right: clamp(15.75rem, 10.973rem + 20.38vw, 28.375rem);
+    width: clamp(3.75rem, 2.094rem + 7.06vw, 8.125rem);
+}
+
+.hero__queen {
+    position: absolute;
+    z-index: 1;
+    bottom: clamp(10.188rem, 7.681rem + 10.7vw, 16.813rem);
+    right: clamp(5.313rem, 4.816rem + 2.12vw, 6.625rem);
+    transform: rotate(8deg);
+    width: clamp(3.813rem, 1.826rem + 8.48vw, 9.063rem);
+}
+
+.hero__knight {
+    position: absolute;
+    bottom: 0;
+    right: clamp(8.125rem, 4.554rem + 15.24vw, 17.563rem);
+    z-index: 2;
+    width: clamp(6.25rem, 3.98rem + 9.69vw, 12.25rem);
+}
+
+.hero__pawn{
+    display: none;
+    position: absolute;
+    bottom: 19px;
+    right: -8px;
+    z-index: 2;
+}
+
+.hero__circle {
+    position: absolute;
+    bottom: 41px;
+    right: 21px;
+    width: clamp(21.875rem, 11.788rem + 43.04vw, 48.531rem);
+    animation: spin 20s linear infinite;
+}
+
+.hero__city {
+    position: absolute;
+    bottom: 2px;
+    right: -109px;
+    width: clamp(55.346rem, 37.892rem + 74.47vw, 101.469rem);
+    max-width: none;
+    z-index: 1;
+}
+
+
+.hero__content {
+    position: relative;
+    z-index: 2;
+    padding-top: 90px;
+    width: clamp(20.938rem, 16.042rem + 20.89vw, 33.875rem);
+    margin-inline: auto;
+}
+
+.hero__title {
+    font-size: clamp(2.25rem, 1.685rem + 2.42vw, 3.75rem);
+    color: var(--color-black);
+    text-transform: uppercase;
+    text-align: left;
+    line-height: 1.11;
+    margin-bottom: 24px;
+}
+
+.hero__title span {
+    display: block;
+    font-family: inherit;
+}
+
+.hero__title :first-child {
+    text-align: center;
+}
+
+.hero__title :last-child {
+    text-align: right;
+}
+
+.hero__description {
+    font-size: 18px;
+    color: var(--color-black);
+    line-height: 1.25;
+    margin-bottom: 32px;
+}
+
+.hero__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+
+@media (min-width: 1200px) {
+    .hero {
+        height: 700px;
+    }
+
+    .hero__circle {
+        bottom: 28px;
+        right: -77px;
+    }
+
+    .hero__content {
+        padding-top: 122px;
+        margin-inline: 0;
+    }
+
+    .hero__description {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .hero__actions {
+        flex-direction: row;
+        gap: 16px;
+    }
+
+    .hero__city {
+        bottom: 1px;
+        right: -192px;
+    }
+
+    .hero__queen {
+        transform: none;
+    }
+
+    .hero__pawn {
+        display: block;
+    }
+}
+
+
+@keyframes spin {
+    to { transform: rotate(-360deg); }
+}
