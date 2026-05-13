@@ -1,0 +1,248 @@
+.info {
+    padding-top: clamp(3rem, 2.243rem + 3.23vw, 5rem);
+    padding-bottom: clamp(7.5rem, 5.608rem + 8.07vw, 12.5rem);
+}
+
+.info__title {
+    font-size: clamp(1.75rem, 1.561rem + 0.81vw, 2.25rem);
+    text-transform: uppercase;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: 36px;
+}
+
+.info__title span {
+    line-height: 1.35;
+    font-family: Merriweather, serif;
+}
+
+.info__players {
+    margin-block: 25px;
+    margin-inline: auto;
+}
+
+.info__accent {
+    font-family: Merriweather, serif;
+    font-variant-numeric: lining-nums;
+    color: var(--color-red);
+    font-weight: 700;
+}
+
+.info__player-wrap {
+    position: relative;
+    display: block;
+    width: clamp(23.25rem, 19.537rem + 15.84vw, 33.063rem);
+    margin: 0 -19px 26px;
+}
+
+.info__player-wrap::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: url(../../assets/image/texture.png) center / cover;
+    -webkit-mask-image: url(../../assets/image/chess-player.png);
+    mask-image: url(../../assets/image/chess-player.png);
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    mix-blend-mode: color-burn;
+    pointer-events: none;
+}
+
+.info__subtitle {
+    font-family: Merriweather, serif;
+    font-size: clamp(1.75rem, 1.561rem + 0.81vw, 2.25rem);
+    text-transform: uppercase;
+    line-height: 1.35;
+    margin-bottom: clamp(2.75rem, 2.372rem + 1.61vw, 3.75rem);
+}
+
+.info__table {
+    width: 100%;
+    max-width: 543px;
+    border-collapse: collapse;
+    margin-inline: auto;
+    margin-bottom: clamp(2.5rem, 2.311rem + 0.81vw, 3rem);
+}
+
+.info__table tbody {
+    display: block;
+}
+
+.info__table tr {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 10px;
+    padding: 16px 0;
+    border-top: 2px solid var(--color-border);
+}
+
+.info__table tr:first-child {
+    border-top: none;
+    padding-top: 0;
+}
+
+.info__table tr:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.info__table th {
+    white-space: nowrap;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: left;
+    color: var(--color-black-70);
+}
+
+.info__table td {
+    white-space: nowrap;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-black);
+}
+
+.info__table s {
+    position: relative;
+    text-decoration: none;
+    color: var(--color-black);
+}
+
+.info__table s::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 14px;
+    height: 2px;
+    background: var(--color-red);
+    border-radius: 1px;
+    transform: translateY(-50%);
+}
+
+.info__link {
+    font-size: clamp(1.125rem, 1.078rem + 0.2vw, 1.25rem);
+    color: var(--color-blue);
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+}
+
+@media (min-width: 400px) {
+    .info__player-wrap {
+        margin: 0 auto 26px;
+    }
+
+    .info__link {
+        text-align: center;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .info__title {
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "title-top    photo"
+            "title-bottom photo";
+        column-gap: 2rem;
+    }
+
+    .info__title-top {
+        grid-area: title-top;
+        align-self: end;
+    }
+
+    .info__players {
+        grid-area: photo;
+        margin: 0;
+        align-self: center;
+    }
+
+    .info__title-bottom {
+        grid-area: title-bottom;
+        align-self: start;
+    }
+
+    .info__title-bottom::before {
+        content: "Турнир ";
+    }
+
+    .info__turnier {
+        display: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .info__body {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: start;
+        gap: 0 16px;
+    }
+
+    .info__body-right {
+        padding-top: 30px;
+    }
+
+    .info__player-wrap {
+        margin: 0 0 0 -27px;
+    }
+
+    .info__table {
+        max-width: none;
+        margin-inline: 0;
+    }
+
+    .info__link {
+        text-align: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .info__table tbody {
+        display: table-row-group;
+    }
+
+    .info__table tr {
+        display: table-row;
+        flex-direction: unset;
+        gap: 0;
+        padding: 0;
+    }
+
+    .info__table th,
+    .info__table td {
+        display: table-cell;
+        padding: 15px 0;
+        vertical-align: middle;
+        border-top: 2px solid var(--color-border);
+    }
+
+    .info__table tr:first-child th,
+    .info__table tr:first-child td {
+        border-top: none;
+        padding-top: 0;
+    }
+
+    .info__table tr:last-child th,
+    .info__table tr:last-child td {
+        padding-bottom: 0;
+    }
+
+    .info__table th {
+        width: 307px;
+        padding-right: 10px;
+        border-right: 2px solid var(--color-border);
+    }
+
+    .info__table td {
+        padding-left: 14px;
+    }
+}
+
+

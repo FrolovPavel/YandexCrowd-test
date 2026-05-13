@@ -5,4 +5,6 @@
 
 @import "./components/header.css";
 @import "./components/hero.css";
+@import "./components/ticker.css";
+@import "./components/info.css";
 @import "./components/footer.css";

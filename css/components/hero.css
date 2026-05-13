@@ -40,7 +40,7 @@
 
 .hero__knight {
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     right: clamp(8.125rem, 4.554rem + 15.24vw, 17.563rem);
     z-index: 2;
     width: clamp(6.25rem, 3.98rem + 9.69vw, 12.25rem);
@@ -64,9 +64,9 @@
 
 .hero__city {
     position: absolute;
-    bottom: 2px;
-    right: -109px;
-    width: clamp(55.346rem, 37.892rem + 74.47vw, 101.469rem);
+    bottom: 0;
+    right: -112px;
+    width: clamp(55.938rem, 38.708rem + 73.51vw, 101.469rem);
     max-width: none;
     z-index: 1;
 }
@@ -106,7 +106,7 @@
     font-size: 18px;
     color: var(--color-black);
     line-height: 1.25;
-    margin-bottom: 32px;
+    margin-bottom: 34px;
 }
 
 .hero__actions {
@@ -142,7 +142,6 @@
     }
 
     .hero__city {
-        bottom: 1px;
         right: -192px;
     }
 
