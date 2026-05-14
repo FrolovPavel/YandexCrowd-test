@@ -20,7 +20,7 @@
     font-family: Merriweather, serif;
     color: var(--color-white);
     position: relative;
-    font-size: clamp(1rem, 0.858rem + 0.61vw, 1.375rem);
+    font-size: 16px;
     text-transform: uppercase;
     white-space: nowrap;
 }
@@ -31,6 +31,12 @@
     height: 6px;
     background-color: var(--color-white);
     border-radius: 50%;
+}
+
+@media (min-width: 1200px) {
+    .ticker__content span {
+        font-size: 22px;
+    }
 }
 
 @keyframes ticker {

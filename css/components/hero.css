@@ -27,6 +27,7 @@
     bottom: clamp(6.875rem, 5.598rem + 5.45vw, 10.25rem);
     right: clamp(15.75rem, 10.973rem + 20.38vw, 28.375rem);
     width: clamp(3.75rem, 2.094rem + 7.06vw, 8.125rem);
+    animation: chess-piece-enter 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
 }
 
 .hero__queen {
@@ -36,6 +37,7 @@
     right: clamp(5.313rem, 4.816rem + 2.12vw, 6.625rem);
     transform: rotate(8deg);
     width: clamp(3.813rem, 1.826rem + 8.48vw, 9.063rem);
+    animation: chess-piece-enter-queen 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
 }
 
 .hero__knight {
@@ -44,6 +46,7 @@
     right: clamp(8.125rem, 4.554rem + 15.24vw, 17.563rem);
     z-index: 2;
     width: clamp(6.25rem, 3.98rem + 9.69vw, 12.25rem);
+    animation: chess-piece-enter 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.5s both;
 }
 
 .hero__pawn{
@@ -52,6 +55,7 @@
     bottom: 19px;
     right: -8px;
     z-index: 2;
+    animation: chess-piece-enter 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.7s both;
 }
 
 .hero__circle {
@@ -157,4 +161,26 @@
 
 @keyframes spin {
     to { transform: rotate(-360deg); }
+}
+
+@keyframes chess-piece-enter {
+    from {
+        opacity: 0;
+        transform: translateY(80px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes chess-piece-enter-queen {
+    from {
+        opacity: 0;
+        transform: rotate(8deg) translateY(80px);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(8deg) translateY(0);
+    }
 }

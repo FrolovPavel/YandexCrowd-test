@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 .container {
     max-width: 1262px;
     margin-inline: auto;
@@ -14,6 +18,55 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+/* CAROUSEL-ARROW */
+.carousel-arrow {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--color-black);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.carousel-arrow::before {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-top: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+}
+
+.carousel-arrow:disabled {
+    background: var(--color-gray);
+}
+
+.carousel-arrow-prev::before {
+    transform: rotate(-135deg) translate(-2px, 2px);
+}
+
+.carousel-arrow-next::before {
+    transform: rotate(45deg) translate(-2px, 2px);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .carousel-arrow:not(:disabled):hover {
+        background-color: var(--color-yellow);
+    }
+}
+
+@media (min-width: 1200px) {
+    .carousel-arrow {
+        width: 44px;
+        height: 44px;
+    }
+}
+
 /* BUTTONS */
 .btn {
     font-size: 16px;
@@ -22,6 +75,7 @@ h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
     border-radius: 66px;
     transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
 }
 
 .btn-dark,
